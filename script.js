@@ -1,31 +1,40 @@
 
-function showPage(pageId) {
-    const pages = document.querySelectorAll('.page');
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
+const backToTop = document.getElementById("backToTop");
 
-    // ซ่อนทุกหน้า
-    pages.forEach(function(page) {
-        page.classList.remove('active');
-    });
+// เปิดและปิดเมนูบนมือถือ
+menuToggle.addEventListener("click", function () {
+  const isOpen = navbar.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", isOpen);
+});
 
-    // แสดงหน้าที่เลือก
-    const selectedPage = document.getElementById(pageId);
+// เมื่อกดเมนู ให้ปิดเมนูบนมือถือ
+navbar.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navbar.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
 
-    if (selectedPage) {
-        selectedPage.classList.add('active');
-    }
+// แสดงปุ่มกลับขึ้นด้านบนเมื่อเลื่อนหน้าเว็บ
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 300) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
 
-    // ปิดเมนูมือถือหลังเลือกหน้า
-    const navMenu = document.getElementById('navMenu');
-    navMenu.classList.remove('open');
+// กดปุ่มเพื่อกลับขึ้นด้านบน
+backToTop.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
-    // เลื่อนกลับไปด้านบน
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
+// แสดงปีปัจจุบันในส่วนท้ายเว็บไซต์
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
-function toggleMenu() {
-    const navMenu = document.getElementById('navMenu');
-    navMenu.classList.toggle('open');
-}
