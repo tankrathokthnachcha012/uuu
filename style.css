@@ -1,0 +1,555 @@
+
+:root {
+    --blue: #164e8a;
+    --blue-dark: #0c2f56;
+    --blue-light: #eaf3fc;
+    --white: #ffffff;
+    --text: #243447;
+    --muted: #6b7c8f;
+    --border: #e2eaf2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #f5f8fc;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+button, a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ส่วนหัว */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 6%;
+    background: var(--white);
+    box-shadow: 0 3px 18px #163b5b10;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: var(--blue-light);
+    font-size: 28px;
+}
+
+.brand h2 {
+    color: var(--blue-dark);
+    font-size: 19px;
+}
+
+.brand p {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+nav button {
+    border: none;
+    background: transparent;
+    color: var(--text);
+    padding: 10px 13px;
+    border-radius: 9px;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+nav button:hover {
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: var(--blue);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+/* ระบบเปลี่ยนหน้า */
+.page {
+    display: none;
+    min-height: 65vh;
+    animation: appear 0.35s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* หน้าแรก */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 8%;
+    background: linear-gradient(120deg, #edf5ff, #ffffff);
+}
+
+.tag, .section-heading span, .page-banner span {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    color: var(--blue-dark);
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.35;
+    margin: 12px 0;
+}
+
+.hero h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.hero-content > p {
+    color: var(--muted);
+    max-width: 520px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.primary {
+    background: var(--blue);
+    color: white;
+}
+
+.primary:hover {
+    background: var(--blue-dark);
+}
+
+.outline {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    background: white;
+}
+
+.secondary {
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 20px 45px #173e6625;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 14px;
+    border-radius: 14px;
+    background: #ffffffed;
+}
+
+.image-caption > span {
+    font-size: 30px;
+}
+
+.image-caption p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* การ์ดข้อมูล */
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 35px 8%;
+}
+
+.info-card, .department-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.25s;
+}
+
+.info-card:hover, .department-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #173e6610;
+}
+
+.info-card > span {
+    font-size: 30px;
+}
+
+.info-card h3, .department-card h3 {
+    margin: 10px 0;
+    color: var(--blue-dark);
+}
+
+.info-card p, .department-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.news-section {
+    padding: 35px 8% 65px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: var(--blue-dark);
+    margin: 6px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.news-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.news-icon {
+    font-size: 38px;
+}
+
+.news-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* หน้ารายละเอียด */
+.page-banner {
+    padding: 55px 8%;
+    text-align: center;
+    background: linear-gradient(120deg, #eaf3fc, #f8fbff);
+}
+
+.page-banner h1 {
+    font-size: 35px;
+    color: var(--blue-dark);
+    margin: 8px 0;
+}
+
+.page-banner p {
+    color: var(--muted);
+}
+
+.content-card {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 35px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #163b5b08;
+}
+
+.content-card h2 {
+    font-size: 21px;
+    color: var(--blue-dark);
+    margin: 20px 0 8px;
+}
+
+.content-card h2:first-child {
+    margin-top: 0;
+}
+
+.content-card p, .content-card li {
+    color: #526579;
+}
+
+.content-card ul {
+    padding-left: 25px;
+    margin-bottom: 25px;
+}
+
+/* แผนกวิชา */
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 35px 8%;
+}
+
+.department-icon {
+    display: grid;
+    place-items: center;
+    width: 65px;
+    height: 65px;
+    background: var(--blue-light);
+    border-radius: 16px;
+    font-size: 32px;
+}
+
+.department-card .btn {
+    margin-top: 18px;
+}
+
+.note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 0 20px 30px;
+}
+
+.facebook-box {
+    background: #f5f9ff;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 28px 0;
+}
+
+.facebook-box h3 {
+    color: var(--blue-dark);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1150px;
+    padding: 0 25px;
+    margin: 35px auto;
+}
+
+.contact-grid .content-card {
+    margin: 0;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.map-card {
+    padding: 25px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+.map-card h2 {
+    margin-bottom: 18px;
+    color: var(--blue-dark);
+}
+
+.map-card iframe {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* ท้ายเว็บไซต์ */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--blue-dark);
+    color: white;
+}
+
+footer p {
+    font-size: 13px;
+    color: #d0dfef;
+}
+
+/* รองรับมือถือ */
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav button {
+        text-align: left;
+        padding: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+        gap: 30px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .quick-info, .department-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .brand h2 {
+        font-size: 15px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+
+    .logo {
+        width: 43px;
+        height: 43px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .quick-info, .department-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-banner h1 {
+        font-size: 27px;
+    }
+
+    .content-card {
+        margin: 20px 15px;
+        padding: 22px;
+    }
+
+    .map-card {
+        padding: 15px;
+    }
+
+    .map-card iframe {
+        height: 300px;
+    }
+
+    .news-card {
+        align-items: flex-start;
+        padding: 18px;
+    }
+}

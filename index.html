@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาลัยเทคนิคนางรอง</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="brand">
+        <div class="logo">🎓</div>
+        <div>
+            <h2>วิทยาลัยเทคนิคนางรอง</h2>
+            <p>NANGRONG TECHNICAL COLLEGE</p>
+        </div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <button onclick="showPage('home')">หน้าแรก</button>
+        <button onclick="showPage('about')">รายละเอียดวิทยาลัย</button>
+        <button onclick="showPage('departments')">แผนกวิชา</button>
+        <button onclick="showPage('contact')">ติดต่อเรา</button>
+    </nav>
+</header>
+
+<main>
+    <!-- หน้าแรก -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <span class="tag">WELCOME TO NRTECH</span>
+                <h1>วิทยาลัยเทคนิคนางรอง</h1>
+                <h2>เรียนรู้วิชาชีพ พัฒนาทักษะ สร้างอนาคต</h2>
+                <p>
+                    สถานศึกษาที่มุ่งเน้นการพัฒนาความรู้
+                    ทักษะวิชาชีพ และเทคโนโลยี
+                    เพื่อเตรียมความพร้อมสู่โลกการทำงาน
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn primary"
+                        onclick="showPage('about')">
+                        รายละเอียดวิทยาลัย →
+                    </button>
+
+                    <a class="btn outline"
+                       href="https://www.google.com/maps/search/?api=1&query=วิทยาลัยเทคนิคนางรอง"
+                       target="_blank" rel="noopener">
+                        📍 แผนที่นำทาง
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="img/images 1.jfif"
+                    alt="วิทยาลัยเทคนิคนางรอง">
+                <div class="image-caption">
+                    <span>🏫</span>
+                    <div>
+                        <strong>ก้าวสู่อนาคตด้วยวิชาชีพ</strong>
+                        <p>Learn • Practice • Succeed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-info">
+            <div class="info-card">
+                <span>📚</span>
+                <h3>การศึกษา</h3>
+                <p>เรียนรู้ทั้งภาคทฤษฎีและภาคปฏิบัติ</p>
+            </div>
+            <div class="info-card">
+                <span>💻</span>
+                <h3>เทคโนโลยี</h3>
+                <p>พัฒนาความสามารถด้านเทคโนโลยี</p>
+            </div>
+            <div class="info-card">
+                <span>🛠️</span>
+                <h3>ทักษะวิชาชีพ</h3>
+                <p>ฝึกทักษะเพื่อใช้ในการทำงานจริง</p>
+            </div>
+        </div>
+
+        <div class="news-section">
+            <div class="section-heading">
+                <span>NEWS & INFORMATION</span>
+                <h2>ข่าวสารและประชาสัมพันธ์</h2>
+                <p>ติดตามข่าวสารและกิจกรรมของวิทยาลัย</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-icon">📢</div>
+                <div>
+                    <h3>ข่าวสารจากวิทยาลัย</h3>
+                    <p>ติดตามประกาศ กิจกรรม และข้อมูลการศึกษา</p>
+                    <a href="https://my.nrtech.ac.th/"
+                       target="_blank" rel="noopener">
+                        เข้าสู่ระบบสารสนเทศวิทยาลัย →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- รายละเอียดวิทยาลัย -->
+    <section id="about" class="page">
+        <div class="page-banner">
+            <span>ABOUT OUR COLLEGE</span>
+            <h1>รายละเอียดวิทยาลัย</h1>
+            <p>ข้อมูลพื้นฐานและการจัดการศึกษา</p>
+        </div>
+
+        <div class="content-card">
+            <h2>🏫 ข้อมูลทั่วไป</h2>
+            <p>
+                วิทยาลัยเทคนิคนางรอง เป็นสถานศึกษาด้านอาชีวศึกษา
+                ที่มุ่งพัฒนาผู้เรียนให้มีความรู้ ความสามารถ
+                มีทักษะวิชาชีพ และสามารถนำความรู้ไปประยุกต์ใช้
+                ในการศึกษาต่อและการประกอบอาชีพ
+            </p>
+
+            <h2>🎯 จุดมุ่งหมาย</h2>
+            <ul>
+                <li>ส่งเสริมการเรียนรู้และทักษะวิชาชีพ</li>
+                <li>พัฒนาความรู้ด้านเทคโนโลยีและนวัตกรรม</li>
+                <li>ปลูกฝังความรับผิดชอบและคุณธรรม</li>
+                <li>เตรียมความพร้อมสู่การทำงานในอนาคต</li>
+            </ul>
+
+            <h2>📍 ที่ตั้งวิทยาลัย</h2>
+            <p>
+                เลขที่ 1 หมู่ 1 ถนนบ้านเก่า-แพงพวย
+                ตำบลนางรอง อำเภอนางรอง จังหวัดบุรีรัมย์ 31110
+            </p>
+
+            <a class="btn primary"
+               href="https://nrtech.ac.th/"
+               target="_blank" rel="noopener">
+                เว็บไซต์ทางการของวิทยาลัย
+            </a>
+        </div>
+    </section>
+
+    <!-- แผนกวิชา -->
+    <section id="departments" class="page">
+        <div class="page-banner">
+            <span>DEPARTMENTS</span>
+            <h1>แผนกวิชาที่เปิดสอน</h1>
+            <p>เลือกดูข้อมูลแผนกวิชาที่สนใจ</p>
+        </div>
+
+        <div class="department-grid">
+            <div class="department-card">
+                <div class="department-icon">💻</div>
+                <h3>แผนกวิชาคอมพิวเตอร์</h3>
+                <p>เรียนรู้คอมพิวเตอร์ การเขียนโปรแกรม
+                   การพัฒนาเว็บไซต์ และเทคโนโลยีสารสนเทศ</p>
+                <button class="btn primary"
+                    onclick="showPage('computer')">
+                    ดูรายละเอียด →
+                </button>
+            </div>
+
+            <div class="department-card">
+                <div class="department-icon">🔧</div>
+                <h3>แผนกวิชาช่างยนต์</h3>
+                <p>เรียนรู้เครื่องยนต์ ระบบรถยนต์
+                   และการบำรุงรักษายานยนต์</p>
+            </div>
+
+            <div class="department-card">
+                <div class="department-icon">⚡</div>
+                <h3>แผนกวิชาช่างไฟฟ้า</h3>
+                <p>เรียนรู้ระบบไฟฟ้า การติดตั้ง
+                   และการตรวจสอบอุปกรณ์ไฟฟ้า</p>
+            </div>
+
+            <div class="department-card">
+                <div class="department-icon">📊</div>
+                <h3>แผนกวิชาการบัญชี</h3>
+                <p>เรียนรู้การบัญชี การเงิน
+                   และการจัดทำเอกสารทางธุรกิจ</p>
+            </div>
+
+            <div class="department-card">
+                <div class="department-icon">🔩</div>
+                <h3>แผนกวิชาช่างเชื่อมโลหะ</h3>
+                <p>เรียนรู้กระบวนการเชื่อมโลหะ
+                   และการปฏิบัติงานในโรงฝึกงาน</p>
+            </div>
+
+            <div class="department-card">
+                <div class="department-icon">🏨</div>
+                <h3>แผนกวิชาการโรงแรม</h3>
+                <p>เรียนรู้การบริการ การต้อนรับ
+                   และงานด้านการโรงแรม</p>
+            </div>
+        </div>
+
+        <p class="note">
+            * รายการข้างต้นเป็นตัวอย่างแผนกวิชา
+            ควรตรวจสอบสาขาและหลักสูตรที่เปิดรับจริงจากวิทยาลัย
+        </p>
+    </section>
+
+    <!-- รายละเอียดแผนกคอมพิวเตอร์ -->
+    <section id="computer" class="page">
+        <div class="page-banner">
+            <span>COMPUTER DEPARTMENT</span>
+            <h1>แผนกวิชาคอมพิวเตอร์</h1>
+            <p>เรียนรู้เทคโนโลยี สร้างสรรค์นวัตกรรม</p>
+        </div>
+
+        <div class="content-card">
+            <h2>💻 เกี่ยวกับแผนก</h2>
+            <p>
+                แผนกวิชาคอมพิวเตอร์มุ่งเน้นการเรียนรู้
+                ด้านคอมพิวเตอร์และเทคโนโลยีสารสนเทศ
+                เพื่อพัฒนาทักษะในการสร้างสรรค์ผลงานดิจิทัล
+            </p>
+
+            <h2>📚 ตัวอย่างเนื้อหาที่ศึกษา</h2>
+            <ul>
+                <li>การเขียนโปรแกรมและพัฒนาเว็บไซต์</li>
+                <li>การออกแบบ UI และ UX</li>
+                <li>ระบบฐานข้อมูล</li>
+                <li>ระบบเครือข่ายคอมพิวเตอร์</li>
+                <li>การดูแลและซ่อมบำรุงคอมพิวเตอร์</li>
+            </ul>
+
+            <h2>📣 ข่าวสารและประชาสัมพันธ์</h2>
+            <p>
+                สามารถติดตามข้อมูลแนะนำแผนกและกิจกรรม
+                ผ่านเว็บไซต์แผนกวิชาคอมพิวเตอร์
+            </p>
+
+            <a class="btn primary"
+               href="https://sites.google.com/view/computer-department-nrtech/"
+               target="_blank" rel="noopener">
+                เข้าชมเว็บไซต์แผนกคอมพิวเตอร์ →
+            </a>
+
+            <div class="facebook-box">
+                <h3>Facebook / ประชาสัมพันธ์</h3>
+                <p>
+                    เพิ่มลิงก์ Facebook ของแผนกหรือวิทยาลัย
+                    ที่ได้รับการยืนยันแล้วในส่วนนี้
+                </p>
+                <a href="https://nrtech.ac.th/"
+                   target="_blank" rel="noopener">
+                    เว็บไซต์วิทยาลัยสำหรับติดตามข่าวสาร
+                </a>
+            </div>
+
+            <button class="btn secondary"
+                onclick="showPage('departments')">
+                ← กลับไปหน้าแผนกวิชา
+            </button>
+        </div>
+    </section>
+
+    <!-- ติดต่อเรา -->
+    <section id="contact" class="page">
+        <div class="page-banner">
+            <span>CONTACT US</span>
+            <h1>ติดต่อเรา</h1>
+            <p>สอบถามข้อมูลและติดต่อวิทยาลัย</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="content-card">
+                <h2>📍 ที่อยู่</h2>
+                <p>
+                    วิทยาลัยเทคนิคนางรอง<br>
+                    เลขที่ 1 หมู่ 1 ถนนบ้านเก่า-แพงพวย<br>
+                    ตำบลนางรอง อำเภอนางรอง<br>
+                    จังหวัดบุรีรัมย์ 31110
+                </p>
+
+                <h2>☎️ โทรศัพท์</h2>
+                <p>044-631-556</p>
+
+                <h2>🌐 เว็บไซต์</h2>
+                <a href="https://nrtech.ac.th/"
+                   target="_blank" rel="noopener">
+                    nrtech.ac.th
+                </a>
+
+                <div class="contact-buttons">
+                    <a class="btn primary"
+                       href="https://www.google.com/maps/search/?api=1&query=วิทยาลัยเทคนิคนางรอง"
+                       target="_blank" rel="noopener">
+                        📍 เปิดแผนที่นำทาง
+                    </a>
+                    <a class="btn secondary"
+                       href="tel:044631556">
+                        ☎️ โทรติดต่อ
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-card">
+                <h2>🗺️ แผนที่วิทยาลัย</h2>
+                <iframe
+                    title="แผนที่วิทยาลัยเทคนิคนางรอง"
+                    src="https://maps.google.com/maps?q=วิทยาลัยเทคนิคนางรอง&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <h3>วิทยาลัยเทคนิคนางรอง</h3>
+    <p>เว็บไซต์แนะนำวิทยาลัยเพื่อการศึกษา</p>
+    <p>© 2026 Nangrong Technical College</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
