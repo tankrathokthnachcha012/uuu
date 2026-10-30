@@ -2,280 +2,399 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>วิทยาลัยเทคนิคนางรอง</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิทยาลัยเทคนิคนางรอง</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- แถบเมนู -->
-  <header class="header">
-    <div class="logo">🎓 วิทยาลัยเทคนิคนางรอง</div>
+<!-- ส่วนหัวเว็บไซต์ -->
+<header class="header">
 
-    <button class="menu-toggle" id="menuToggle"
-            aria-label="เปิดเมนู" aria-expanded="false">
-      ☰
-    </button>
+    <div class="brand">
+        <div class="logo">🎓</div>
 
-    <nav class="navbar" id="navbar">
-      <a href="#home">หน้าแรก</a>
-      <a href="#about">เกี่ยวกับวิทยาลัย</a>
-      <a href="#departments">แผนกวิชา</a>
-      <a href="#computer">แผนกคอมพิวเตอร์</a>
-      <a href="#contact">ติดต่อเรา</a>
+        <div>
+            <h2>วิทยาลัยเทคนิคนางรอง</h2>
+            <p>NANGRONG TECHNICAL COLLEGE</p>
+        </div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <button onclick="showPage('home')">หน้าแรก</button>
+        <button onclick="showPage('about')">รายละเอียดวิทยาลัย</button>
+        <button onclick="showPage('departments')">แผนกวิชา</button>
+        <button onclick="showPage('contact')">ติดต่อเรา</button>
     </nav>
-  </header>
 
-  <main>
-    <!-- หน้าแรก -->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <span class="tag">NA NGRONG TECHNICAL COLLEGE</span>
-        <h1>วิทยาลัยเทคนิคนางรอง</h1>
+</header>
+
+
+<!-- ================= หน้าแรก ================= -->
+<main>
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">WELCOME TO NANGRONG TECHNICAL COLLEGE</span>
+
+            <h1>วิทยาลัยเทคนิคนางรอง</h1>
+
+            <h2>มุ่งมั่นพัฒนาความรู้ สร้างทักษะสู่อนาคต</h2>
+
+            <p>
+                สถานศึกษาที่มุ่งเน้นการจัดการเรียนการสอน
+                ด้านวิชาชีพและเทคโนโลยี
+                เพื่อพัฒนาผู้เรียนให้มีความรู้ ความสามารถ
+                และพร้อมเข้าสู่ตลาดแรงงาน
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn primary"
+                    onclick="showPage('about')">
+                    รู้จักวิทยาลัย
+                </button>
+
+                <button class="btn outline"
+                    onclick="showPage('departments')">
+                    ดูแผนกวิชา
+                </button>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="img/images 1.jfif"
+                alt="วิทยาลัยเทคนิคนางรอง">
+
+            <div class="image-caption">
+                <span>🏫</span>
+                <div>
+                    <strong>สถานศึกษาแห่งการเรียนรู้</strong>
+                    <p>พัฒนาทักษะวิชาชีพสู่อนาคต</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="quick-info">
+
+        <div class="info-card">
+            <span>📚</span>
+            <h3>การเรียนการสอน</h3>
+            <p>มุ่งเน้นการเรียนรู้ทั้งภาคทฤษฎีและภาคปฏิบัติ</p>
+        </div>
+
+        <div class="info-card">
+            <span>💻</span>
+            <h3>เทคโนโลยี</h3>
+            <p>ส่งเสริมทักษะด้านเทคโนโลยีและนวัตกรรม</p>
+        </div>
+
+        <div class="info-card">
+            <span>🎯</span>
+            <h3>พัฒนาวิชาชีพ</h3>
+            <p>เตรียมความพร้อมสู่การทำงานในอนาคต</p>
+        </div>
+
+    </div>
+
+
+    <div class="news-section">
+
+        <div class="section-heading">
+            <span>NEWS & ACTIVITIES</span>
+            <h2>ข่าวสารประชาสัมพันธ์</h2>
+            <p>ติดตามข่าวสารและกิจกรรมของวิทยาลัย</p>
+        </div>
+
+        <div class="news-card">
+            <div class="news-icon">📢</div>
+
+            <div>
+                <h3>ประชาสัมพันธ์ข่าวสารวิทยาลัย</h3>
+                <p>
+                    ติดตามข่าวสาร กิจกรรม และประกาศต่าง ๆ
+                    ผ่านช่องทางประชาสัมพันธ์ของวิทยาลัย
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= รายละเอียดวิทยาลัย ================= -->
+<section id="about" class="page">
+
+    <div class="page-banner">
+        <span>ABOUT US</span>
+        <h1>รายละเอียดวิทยาลัย</h1>
+        <p>ทำความรู้จักกับวิทยาลัยเทคนิคนางรอง</p>
+    </div>
+
+    <div class="content-card">
+
+        <h2>🏫 ประวัติและความเป็นมา</h2>
+
         <p>
-          แหล่งเรียนรู้ พัฒนาทักษะวิชาชีพ
-          สร้างประสบการณ์ พร้อมก้าวสู่อนาคต
+            วิทยาลัยเทคนิคนางรองเป็นสถานศึกษาด้านอาชีวศึกษา
+            ที่มุ่งจัดการเรียนการสอนเพื่อพัฒนาความรู้
+            และทักษะวิชาชีพให้แก่ผู้เรียน
         </p>
 
-        <div class="hero-buttons">
-          <a href="#about" class="btn primary">รู้จักวิทยาลัย</a>
-          <a href="#departments" class="btn secondary">ดูแผนกวิชา</a>
-        </div>
-      </div>
-    </section>
+        <h2>🎯 วิสัยทัศน์</h2>
 
-    <!-- เกี่ยวกับวิทยาลัย -->
-    <section class="section" id="about">
-      <div class="section-heading">
-        <span>ABOUT US</span>
-        <h2>เกี่ยวกับวิทยาลัย</h2>
-        <p>เรียนรู้ข้อมูลและแนวทางการศึกษาด้านวิชาชีพ</p>
-      </div>
+        <p>
+            มุ่งพัฒนาผู้เรียนให้มีความรู้ ความสามารถ
+            มีทักษะวิชาชีพ และสามารถนำความรู้ไปประยุกต์ใช้ได้
+        </p>
 
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="img/images 1.jfif" alt="ภาพวิทยาลัยเทคนิคนางรอง">
-        </div>
+        <h2>📖 พันธกิจ</h2>
 
-        <div class="about-content">
-          <h3>วิทยาลัยเทคนิคนางรอง</h3>
-          <p>
-            เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมข้อมูลเบื้องต้น
-            เกี่ยวกับวิทยาลัย แผนกวิชา การเรียนการสอน
-            และช่องทางประชาสัมพันธ์สำหรับผู้ที่สนใจเข้าศึกษา
-          </p>
-          <p>
-            ผู้เข้าชมสามารถเลือกดูข้อมูลแต่ละส่วน
-            และกดลิงก์เพื่อค้นหาตำแหน่งวิทยาลัยบนแผนที่ได้
-          </p>
-          <a
-            class="btn primary"
-            href="https://www.google.com/maps/search/?api=1&query=วิทยาลัยเทคนิคนางรอง"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📍 ดูแผนที่วิทยาลัย
-          </a>
-        </div>
-      </div>
-    </section>
+        <ul>
+            <li>จัดการเรียนการสอนด้านวิชาชีพอย่างมีคุณภาพ</li>
+            <li>ส่งเสริมการใช้เทคโนโลยีในการเรียนรู้</li>
+            <li>พัฒนาทักษะและความสามารถของผู้เรียน</li>
+            <li>ส่งเสริมคุณธรรมและจริยธรรม</li>
+            <li>พัฒนาความร่วมมือกับสถานประกอบการ</li>
+        </ul>
 
-    <!-- แผนกวิชา -->
-    <section class="section section-light" id="departments">
-      <div class="section-heading">
+        <h2>⭐ จุดเด่นของวิทยาลัย</h2>
+
+        <ul>
+            <li>มีการเรียนรู้ทั้งภาคทฤษฎีและภาคปฏิบัติ</li>
+            <li>ส่งเสริมทักษะด้านเทคโนโลยี</li>
+            <li>พัฒนาผู้เรียนให้พร้อมสำหรับการทำงาน</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ================= แผนกวิชา ================= -->
+<section id="departments" class="page">
+
+    <div class="page-banner">
         <span>OUR DEPARTMENTS</span>
-        <h2>แผนกวิชาที่เปิดสอน</h2>
-        <p>เลือกดูข้อมูลแผนกวิชาที่สนใจ</p>
-      </div>
+        <h1>แผนกวิชา</h1>
+        <p>เลือกชมรายละเอียดแผนกวิชาต่าง ๆ</p>
+    </div>
 
-      <div class="department-grid">
-        <article class="department-card">
-          <div class="department-icon">💻</div>
-          <h3>แผนกวิชาคอมพิวเตอร์</h3>
-          <p>
-            เรียนรู้การเขียนโปรแกรม พัฒนาเว็บไซต์
-            ฐานข้อมูล และเทคโนโลยีสารสนเทศ
-          </p>
-          <a href="#computer">ดูรายละเอียด →</a>
-        </article>
 
-        <article class="department-card">
-          <div class="department-icon">⚙️</div>
-          <h3>สาขาวิชาช่างอุตสาหกรรม</h3>
-          <p>
-            ศึกษาทักษะทางช่าง การปฏิบัติงาน
-            และการใช้เครื่องมือในงานอุตสาหกรรม
-          </p>
-        </article>
+    <div class="department-grid">
 
-        <article class="department-card">
-          <div class="department-icon">🔌</div>
-          <h3>สาขาวิชาไฟฟ้าและอิเล็กทรอนิกส์</h3>
-          <p>
-            เรียนรู้พื้นฐานระบบไฟฟ้า วงจร
-            และการทำงานของอุปกรณ์อิเล็กทรอนิกส์
-          </p>
-        </article>
-
-        <article class="department-card">
-          <div class="department-icon">🚗</div>
-          <h3>สาขาวิชาช่างยนต์</h3>
-          <p>
-            ศึกษาหลักการทำงานของเครื่องยนต์
-            การตรวจสอบ และการบำรุงรักษายานยนต์
-          </p>
-        </article>
-
-        <article class="department-card">
-          <div class="department-icon">📊</div>
-          <h3>สาขาวิชาธุรกิจ</h3>
-          <p>
-            เรียนรู้การจัดการธุรกิจ งานสำนักงาน
-            การสื่อสาร และการใช้เทคโนโลยีในการทำงาน
-          </p>
-        </article>
-
-        <article class="department-card">
-          <div class="department-icon">📚</div>
-          <h3>หลักสูตรวิชาชีพอื่น ๆ</h3>
-          <p>
-            ดูข้อมูลหลักสูตรและสาขาที่เปิดรับสมัคร
-            จากช่องทางประชาสัมพันธ์ของวิทยาลัย
-          </p>
-          <a
-            href="https://www.facebook.com/share/1CC98LTh6g/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ตรวจสอบข้อมูลล่าสุด →
-          </a>
-        </article>
-      </div>
-
-      <p class="notice">
-        หมายเหตุ: รายชื่อแผนกในตัวอย่างนี้ควรตรวจสอบกับหลักสูตร
-        ที่วิทยาลัยเปิดสอนจริงก่อนนำเว็บไซต์ไปส่งงาน
-      </p>
-    </section>
-
-    <!-- แผนกคอมพิวเตอร์ -->
-    <section class="section" id="computer">
-      <div class="section-heading">
-        <span>COMPUTER DEPARTMENT</span>
-        <h2>แผนกวิชาคอมพิวเตอร์</h2>
-        <p>ทักษะดิจิทัลและเทคโนโลยีที่นำไปประยุกต์ใช้ได้</p>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature">
-          <span>🌐</span>
-          <h3>พัฒนาเว็บไซต์</h3>
-          <p>เรียนรู้ HTML, CSS และ JavaScript เพื่อสร้างเว็บไซต์</p>
+        <div class="department-card">
+            <div class="department-icon">💻</div>
+            <h3>แผนกวิชาเทคโนโลยีสารสนเทศ</h3>
+            <p>เรียนรู้คอมพิวเตอร์ การเขียนโปรแกรม เว็บไซต์ และระบบเครือข่าย</p>
+            <button class="btn secondary"
+                onclick="showPage('computer')">
+                ดูรายละเอียด
+            </button>
         </div>
 
-        <div class="feature">
-          <span>🧑‍💻</span>
-          <h3>เขียนโปรแกรม</h3>
-          <p>ฝึกคิดเป็นขั้นตอน แก้ปัญหา และพัฒนาโปรแกรม</p>
+        <div class="department-card">
+            <div class="department-icon">⚙️</div>
+            <h3>แผนกวิชาช่างยนต์</h3>
+            <p>เรียนรู้การซ่อมบำรุง ตรวจสอบ และพัฒนายานยนต์</p>
         </div>
 
-        <div class="feature">
-          <span>🗄️</span>
-          <h3>ฐานข้อมูล</h3>
-          <p>เรียนรู้การจัดเก็บ ค้นหา และจัดการข้อมูล</p>
+        <div class="department-card">
+            <div class="department-icon">🔌</div>
+            <h3>แผนกวิชาช่างไฟฟ้ากำลัง</h3>
+            <p>เรียนรู้ระบบไฟฟ้า การติดตั้ง และการบำรุงรักษา</p>
         </div>
 
-        <div class="feature">
-          <span>🛠️</span>
-          <h3>ดูแลระบบคอมพิวเตอร์</h3>
-          <p>ทำความเข้าใจฮาร์ดแวร์ ซอฟต์แวร์ และเครือข่าย</p>
-        </div>
-      </div>
-
-      <div class="highlight-box">
-        <div>
-          <h3>สนใจข้อมูลการเรียนต่อ?</h3>
-          <p>ติดตามข่าวสารและประกาศจากเพจประชาสัมพันธ์</p>
+        <div class="department-card">
+            <div class="department-icon">🏗️</div>
+            <h3>แผนกวิชาช่างก่อสร้าง</h3>
+            <p>เรียนรู้การออกแบบและงานก่อสร้างอาคาร</p>
         </div>
 
-        <a
-          class="btn facebook-btn"
-          href="https://www.facebook.com/share/1CC98LTh6g/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📢 ไปยัง Facebook
-        </a>
-      </div>
-    </section>
-
-    <!-- ติดต่อเรา -->
-    <section class="section section-light" id="contact">
-      <div class="section-heading">
-        <span>CONTACT US</span>
-        <h2>ติดต่อและประชาสัมพันธ์</h2>
-        <p>เลือกช่องทางเพื่อค้นหาข้อมูลเพิ่มเติม</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="department-icon">📍</div>
-          <h3>ที่ตั้งวิทยาลัย</h3>
-          <p>วิทยาลัยเทคนิคนางรอง จังหวัดบุรีรัมย์</p>
-          <a
-            class="btn primary"
-            href="https://www.google.com/maps/search/?api=1&query=วิทยาลัยเทคนิคนางรอง"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            เปิด Google Maps
-          </a>
+        <div class="department-card">
+            <div class="department-icon">📊</div>
+            <h3>แผนกวิชาการบัญชี</h3>
+            <p>เรียนรู้การจัดทำบัญชี การเงิน และเอกสารทางธุรกิจ</p>
         </div>
 
-        <div class="contact-card">
-          <div class="department-icon">📢</div>
-          <h3>เพจประชาสัมพันธ์</h3>
-          <p>ติดตามข่าวสาร กิจกรรม และประกาศต่าง ๆ</p>
-          <a
-            class="btn facebook-btn"
-            href="https://www.facebook.com/share/1CC98LTh6g/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            เปิด Facebook
-          </a>
+        <div class="department-card">
+            <div class="department-icon">💼</div>
+            <h3>แผนกวิชาการตลาด</h3>
+            <p>เรียนรู้การตลาด การขาย และการดำเนินธุรกิจ</p>
         </div>
 
-        <div class="contact-card">
-          <div class="department-icon">🎓</div>
-          <h3>ข้อมูลการรับสมัคร</h3>
-          <p>ตรวจสอบรายละเอียดการรับสมัครจากช่องทางของวิทยาลัย</p>
-          <a
-            href="https://www.facebook.com/share/1CC98LTh6g/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ดูประกาศเพิ่มเติม →
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
 
-  <!-- ท้ายเว็บไซต์ -->
-  <footer class="footer">
-    <h3>วิทยาลัยเทคนิคนางรอง</h3>
-    <p>เว็บไซต์ตัวอย่างเพื่อการศึกษาและการพัฒนาเว็บไซต์</p>
-    <p class="copyright">
-      © <span id="year"></span> Nang Rong Technical College
+    <p class="note">
+        หมายเหตุ: รายชื่อแผนกและรายละเอียดในตัวอย่างนี้
+        ควรตรวจสอบกับข้อมูลหลักสูตรของวิทยาลัยอีกครั้ง
     </p>
-  </footer>
 
-  <button id="backToTop" class="back-to-top" aria-label="กลับขึ้นด้านบน">
-    ↑
-  </button>
+</section>
 
-  <script src="script.js"></script>
+
+<!-- ================= รายละเอียดแผนกคอมพิวเตอร์ ================= -->
+<section id="computer" class="page">
+
+    <div class="page-banner">
+        <span>INFORMATION TECHNOLOGY</span>
+        <h1>แผนกวิชาเทคโนโลยีสารสนเทศ</h1>
+        <p>เรียนรู้เทคโนโลยี สร้างสรรค์นวัตกรรม</p>
+    </div>
+
+    <div class="content-card">
+
+        <h2>💻 เกี่ยวกับแผนก</h2>
+
+        <p>
+            ศึกษาเกี่ยวกับคอมพิวเตอร์ เทคโนโลยีสารสนเทศ
+            การเขียนโปรแกรม การพัฒนาเว็บไซต์
+            และระบบเครือข่ายคอมพิวเตอร์
+        </p>
+
+        <h2>📚 เนื้อหาที่เรียน</h2>
+
+        <ul>
+            <li>การเขียนโปรแกรมคอมพิวเตอร์</li>
+            <li>การพัฒนาเว็บไซต์ HTML, CSS และ JavaScript</li>
+            <li>การจัดการฐานข้อมูล</li>
+            <li>ระบบเครือข่ายคอมพิวเตอร์</li>
+            <li>การดูแลและซ่อมบำรุงคอมพิวเตอร์</li>
+        </ul>
+
+        <h2>🚀 แนวทางอาชีพ</h2>
+
+        <ul>
+            <li>นักพัฒนาเว็บไซต์</li>
+            <li>เจ้าหน้าที่เทคโนโลยีสารสนเทศ</li>
+            <li>ผู้ดูแลระบบเครือข่าย</li>
+            <li>ช่างเทคนิคคอมพิวเตอร์</li>
+        </ul>
+
+        <div class="facebook-box">
+
+            <h3>📘 Facebook / ประชาสัมพันธ์</h3>
+
+            <p>
+                ติดตามข่าวสารและประชาสัมพันธ์ของวิทยาลัย
+                ผ่าน Facebook
+            </p>
+
+            <a
+                href="https://www.facebook.com/share/1CC98LTh6g/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary">
+                Facebook วิทยาลัย
+            </a>
+
+        </div>
+
+        <button class="btn outline"
+            onclick="showPage('departments')">
+            ← กลับไปหน้าแผนกวิชา
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ติดต่อเรา ================= -->
+<section id="contact" class="page">
+
+    <div class="page-banner">
+        <span>CONTACT US</span>
+        <h1>ติดต่อเรา</h1>
+        <p>ช่องทางการติดต่อวิทยาลัยเทคนิคนางรอง</p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="content-card">
+
+            <h2>📍 ที่อยู่</h2>
+
+            <p>
+                วิทยาลัยเทคนิคนางรอง<br>
+                อำเภอนางรอง จังหวัดบุรีรัมย์
+            </p>
+
+            <h2>📞 ช่องทางติดต่อ</h2>
+
+            <p>
+                เว็บไซต์: https://nrtech.ac.th/
+            </p>
+
+            <div class="contact-buttons">
+
+                <a
+                    href="https://nrtech.ac.th/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn primary">
+                    เว็บไซต์วิทยาลัย
+                </a>
+
+                <a
+                    href="https://www.facebook.com/share/1CC98LTh6g/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn secondary">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="map-card">
+
+            <h2>🗺️ แผนที่วิทยาลัย</h2>
+
+            <iframe
+                src="https://www.google.com/maps?q=วิทยาลัยเทคนิคนางรอง&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= ท้ายเว็บไซต์ ================= -->
+<footer>
+
+    <p>© วิทยาลัยเทคนิคนางรอง</p>
+    <p>NANGRONG TECHNICAL COLLEGE</p>
+
+</footer>
+
+
+<!-- เรียกใช้ JavaScript -->
+<script src="script.js"></script>
+
 </body>
 </html>
